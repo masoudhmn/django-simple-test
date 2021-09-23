@@ -11,7 +11,7 @@
 body {
     direction: rtl;
     text-align: right;
-    font-family: "sahel";
+    font-family: "Sahel";
     font-size: 14px;
 }
 
@@ -27,3 +27,4 @@ body {
 .pager-button {
     float: left !important;
 }
+
