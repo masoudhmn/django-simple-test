@@ -28,6 +28,25 @@ body {
     float: left !important;
 }
 
-.container {
+/* .container {
     text-align: justify !important ;
+} */
+
+header.masthead .page-heading h1, header.masthead .page-heading .h1, header.masthead .site-heading h1, header.masthead .site-heading .h1 {
+	font-size: 40px ;
+}
+
+.text-justify {
+text-align: justify;
+}
+
+.post-preview > a > .post-title {
+	font-size: 32px;
+}
+
+.post-subtitle{
+	font-size: 16px;
+}
+.ml-3 {
+    margin-left: 3px;
 }
