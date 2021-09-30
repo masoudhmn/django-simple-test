@@ -20,8 +20,14 @@ def detail(request,slug):
     }
     return render(request,"blog/detail.html",contex)
 
-def category(request,slug):
+def category(request,slug,page=1):
+    category = get_object_or_404(Category,slug=slug,status=True)
+    article_list = category.articles.published()
+    pageinator = Paginator(article_list,4)    
+    articles = pageinator.get_page(page)
+
     contex = {
-        "category" : get_object_or_404(Category,slug=slug,status=True)
+        "category" : category,
+        "articles" : articles
     }
     return render(request,"blog/category.html",contex)
