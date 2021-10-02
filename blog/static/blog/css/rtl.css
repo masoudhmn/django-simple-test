@@ -11,8 +11,12 @@
 body {
     direction: rtl;
     text-align: right;
-    font-family: "Sahel";
+    font-family: "Sahel" !important;
     font-size: 14px;
+}
+
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+	font-family: "Sahel" ;
 }
 
 .navbar-nav{
