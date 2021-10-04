@@ -21,7 +21,7 @@ class Category(models.Model):
         verbose_name = "دسته‌بندی"
         verbose_name_plural = "دسته‌بندی‌ها"
         ordering = ['parent__id','position']
-
+ 
 
     def __str__(self):
         return self.title
