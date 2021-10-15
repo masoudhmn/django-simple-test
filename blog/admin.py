@@ -3,6 +3,9 @@ from .models import Article,Category
 from django.utils.translation import ngettext
 
 
+#admin header change
+admin.site.site_header = "وبلاگ"
+
 #admin.site.disable_action('delete_selected')
 
 # Register your models here.
