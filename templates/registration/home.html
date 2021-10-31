@@ -1,5 +1,9 @@
 {% extends 'registration/base.html' %}
 
-my home
+{% block title %} 
+    لیست مقالات
+{% endblock %}
 
-<p>{{user.get_full_name}}</p>
+{% block main %}
+    خوش آمدی {{user.get_full_name}}
+{% endblock %}
