@@ -17,6 +17,7 @@
                 <form method="post">{% csrf_token %}
                     <p class="py-2">آیا از حذف مقاله «{{object}}» از نویسنده «{{object.author.get_full_name}}» مطمئن هستید؟</p>
                     <input type="submit" value="حذف" class="btn btn-danger">
+                    <a href="{% url 'account:article-update' request.resolver_match.kwargs.pk %}" class="btn btn-success">خیر</a>
                 </form>
             </div>
         </div>
