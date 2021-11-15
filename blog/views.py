@@ -4,6 +4,8 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.http import HttpResponse, JsonResponse
 from .models import Article, Category
+from account.mixins import AuthorAccessMixin
+
 # Create your views here.
 
 
@@ -35,6 +37,11 @@ class ArticleDetail(DetailView):
     def get_object(self):
         slug = self.kwargs.get('slug')
         return get_object_or_404(Article.objects.published(), slug=slug)
+
+class ArticlePreview(AuthorAccessMixin,DetailView):
+    def get_object(self):
+        pk = self.kwargs.get('pk')
+        return get_object_or_404(Article, pk=pk)
 
 # def category(request, slug, page=1):
 #     category = get_object_or_404(Category, slug=slug, status=True)
