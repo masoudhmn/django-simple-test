@@ -12,6 +12,7 @@ class FieldsMixin():
                             "description",
                             "thumbnail",
                             "publish",
+                            'is_special',
                             "status"
                           ]
         elif request.user.is_author:
@@ -21,6 +22,7 @@ class FieldsMixin():
                             "category",
                             "description",
                             "thumbnail",
+                            'is_special',
                             "publish",
                           ]
         else:
