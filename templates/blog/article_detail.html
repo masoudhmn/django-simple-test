@@ -12,6 +12,10 @@
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
                     <h1>{{object.title}}</h1>
+                        {% if article.is_special %}
+                        <span class="badge bg-danger" style="font-size: 14px;">ویژه</span>
+                        {% endif %}
+                    
                     <time>{{object.jpublish}}</time>
                 </div>
             </div>
@@ -28,7 +32,8 @@
                         {{object.description|safe}}
                     
                     {% else %}
-                        <p>این مقاله ویژه است. برای مشاهده‌ی آن باید <a href="#">اشتراک ویژه </a>تهیه کنید</p>
+                        {{article.description|striptags|truncatewords:30}}
+                        <p class="alert alert-warning">این مقاله ویژه است. برای مشاهده‌ی آن باید <a class="alert-link" href="#">اشتراک ویژه </a>تهیه کنید</p>
                     {% endif %}
 
                 {% else %}  
